@@ -71,7 +71,7 @@ impl<O: IsA<LoadableIcon>> LoadableIconExt for O {
                 &mut error,
             );
             if error.is_null() {
-                Ok((from_glib_full(ret), from_glib_full(type_)))
+                Ok((from_glib_full(ret), GString::from("")))
             } else {
                 Err(from_glib_full(error))
             }
